@@ -15,3 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/user/adddo','UserController@adddo');
+Route::prefix('/pay')->group(function(){
+    Route::get('/pay','pay\PayContrller@pay');
+});
