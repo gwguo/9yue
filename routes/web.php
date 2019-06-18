@@ -14,7 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/user/adddo','UserController@adddo');
+
+Route::get("/test/abc",'Test\TestController@abc');
+
 Route::prefix('/pay')->group(function(){
     Route::get('/pay','pay\PayContrller@pay');
+    Route::get('/alipay','alipay\AlipayController@pay');
+});
+Route::prefix('/user')->group(function(){
+    Route::post('/reg','log\LogController@reg');
+    Route::post('/login','log\LogController@login');
 });

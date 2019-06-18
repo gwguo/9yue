@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\pay;
+namespace App\Http\Controllers\alipay;
 use GuzzleHttp\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class PayContrller extends Controller
+class AlipayController extends Controller
 {
     public function pay(){
         $request_data = [
@@ -16,7 +16,7 @@ class PayContrller extends Controller
         ];
         $data = [
             'app_id'=>'2016092600603244',
-            'method'=>'alipay.trade.page.pay',//接口名称
+            'method'=>'alipay.trade.wap.pay',//接口名称
             'charset'=>'utf-8',//请求编码
             'sign_type'=>'RSA2',//签名类型
             'timestamp'=>date('Y-m-d h:i:s'),
@@ -37,7 +37,7 @@ class PayContrller extends Controller
         ksort($data);
         $str = '';
         foreach ($data as $k=>$v){
-            $str .= $k.'='.$v.'&';
+            $str .= $k.'='.urlencode($v).'&';
         }
         $str = rtrim($str,'&');
         $url = "https://openapi.alipaydev.com/gateway.do?";
