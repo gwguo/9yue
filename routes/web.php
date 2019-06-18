@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get("/test/abc",'Test\TestController@abc');//abc
-
+Route::get('a','log\LogController@redisC');
 Route::prefix('/pay')->group(function(){
     Route::get('/pay','pay\PayContrller@pay');
     Route::get('/alipay','alipay\AlipayController@pay');
