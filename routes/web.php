@@ -14,8 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get("/test/abc",'Test\TestController@abc');//as
+Route::get("/test/abc",'Test\TestController@abc');
 Route::get('/a','log\LogController@redisC');
 Route::prefix('/pay')->group(function(){
     Route::get('/pay','pay\PayContrller@pay');
