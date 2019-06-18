@@ -3,12 +3,25 @@
 namespace App\Http\Controllers\log;
 
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
 
+=======
+use Illuminate\Support\Facades\Redis;
+>>>>>>> a9bf2071938c9e1fb1e62703dbdcbd02c5375e58
 use Illuminate\Http\Request;
 
 use App\Model\UserModel;
 class LogController extends Controller
 {
+<<<<<<< HEAD
+=======
+    public function redisC(){
+        $a = 'abc';
+        Redis::set('a',$a);
+        $c = Redis::get('a');
+        echo $c;
+    }
+>>>>>>> a9bf2071938c9e1fb1e62703dbdcbd02c5375e58
     public function reg(Request $request){
         $data = $request->input();
         unset($data['password_confirm']);
