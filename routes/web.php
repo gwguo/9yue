@@ -15,10 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 Route::get("/test/abc",'Test\TestController@abc');
 <<<<<<< HEAD
 
 =======
+=======
+Route::get("/test/abc",'Test\TestController@abc');//as
+>>>>>>> 0a458b105e65644a849ae548a027b7ebf92e9098
 Route::get('/a','log\LogController@redisC');
 >>>>>>> a9bf2071938c9e1fb1e62703dbdcbd02c5375e58
 Route::prefix('/pay')->group(function(){
