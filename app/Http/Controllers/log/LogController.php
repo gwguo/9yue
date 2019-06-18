@@ -12,8 +12,8 @@ class LogController extends Controller
     public function redisC(){
         $a = 'abc';
         Redis::set('a',$a);
-        $b = Redis::get('a');
-        echo $b;
+        $c = Redis::get('a');
+        echo $c;
     }
     public function reg(Request $request){
         $data = $request->input();
