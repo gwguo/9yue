@@ -100,12 +100,20 @@ class LogController extends Controller
         $email = $request->email;
         $user = UserModel::where('email',$email)->first();
         if($user){
-            $data = [
-                'send_email'=>$email,
-                'add_time'=>time(),
-                'status'=>1
-            ];
-            sendEmail::insertGetId($data);
+            $sendEmail = sendEmail::where('send_email',$email)->first();
+            if($sendEmail){
+                $update = [
+                    'status'=>1
+                ];
+                sendEmail::where('send_email',$email)->update($update);
+            }else{
+                $data = [
+                    'send_email'=>$email,
+                    'add_time'=>time(),
+                    'status'=>1
+                ];
+                sendEmail::insertGetId($data);
+            }
             echo json_encode(['code'=>1,'font'=>'邮箱以发送，请耐心']);
         }else{
             echo json_encode(['code'=>2,'font'=>'错误邮箱']);
