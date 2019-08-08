@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('teacher/login','Teacher\TeacherController@login');
+Route::post('teacher/logindo','Teacher\TeacherController@logindo');
