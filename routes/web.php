@@ -11,10 +11,11 @@
 */
 Route::get('/', function () {
     return view('welcome');
-<<<<<<< HEAD
+
 });
 Route::get('teacher/login','Teacher\TeacherController@login');
 Route::post('teacher/logindo','Teacher\TeacherController@logindo');
-=======
-});    
->>>>>>> 098b5a3a7f78c54070d968eeb740b594245ccc6f
+Route::prefix("user")->group(function (){
+    Route::any("login","User\LoginController@index");
+    Route::any("register","User\LoginController@register");
+});
