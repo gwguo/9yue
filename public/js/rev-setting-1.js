@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 1cbffb1bd10f5e1482dc260b126c0b2f60172e2f
 $(document).ready(function() {
 
 	if ($.fn.cssOriginal!=undefined)

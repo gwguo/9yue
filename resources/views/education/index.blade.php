@@ -1,4 +1,5 @@
 @extends('layouts.layouts')
+<link rel="stylesheet" href="/css/style.css"/>
 <script type="text/javascript">
     function nTabs(thisObj,Num){
         if(thisObj.className == "current")return;
