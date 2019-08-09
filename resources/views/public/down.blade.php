@@ -3,10 +3,10 @@
     <div class="fcontainer">
         <div class="fwxwb">
             <div class="fwxwb_1">
-                <span>关注微信</span><img width="95" alt="" src="images/num.png">
+                <span>关注微信</span><img width="95" alt="" src="{{url('images/num.png')}}">
             </div>
             <div>
-                <span>关注微博</span><img width="95" alt="" src="images/wb.png">
+                <span>关注微博</span><img width="95" alt="" src="{{url('images/wb.png')}}">
             </div>
         </div>
         <div class="fmenu">
