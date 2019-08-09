@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,3 +34,12 @@ Route::match(['post','get'],'/admin/adminlogin','Admin\LoginController@adminLogi
 //后台首页
 Route::get('/admin/adminindex','Admin\AdminController@adminIndex');
 
+=======
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('/','education\EducationController@index');
+Route::prefix('/course')->group(function(){
+    Route::get('/list','course\CourseController@lists');
+});
+>>>>>>> 9aa571d401adaffef997e3d11d07eef68c3329d5

@@ -3,10 +3,10 @@
     <div class="fcontainer">
         <div class="fwxwb">
             <div class="fwxwb_1">
-                <span>关注微信</span><img width="95" alt="" src="images/num.png">
+                <span>关注微信</span><img width="95" alt="" src="/images/num.png">
             </div>
             <div>
-                <span>关注微博</span><img width="95" alt="" src="images/wb.png">
+                <span>关注微博</span><img width="95" alt="" src="/images/wb.png">
             </div>
         </div>
         <div class="fmenu">
@@ -25,10 +25,10 @@
 	</div>
 	</span>
     <span class="barico em" style="position:relative">
-	  <img src="images/num.png" width="75" class="showem">
+	  <img src="/images/num.png" width="75" class="showem">
 	</span>
     <span class="barico wb" style="position:relative">
-	  <img src="images/wb.png" width="75" class="showwb">
+	  <img src="/images/wb.png" width="75" class="showwb">
 	</span>
     <span class="barico top" id="top">置顶</span>
 </div>
