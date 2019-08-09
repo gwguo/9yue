@@ -9,6 +9,6 @@ class CourseController extends Controller
 {
     //
     public function lists(){
-        return view('course.lists'); 
+        return view('course.lists');
     }
 }
