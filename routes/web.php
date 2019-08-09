@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,10 +11,13 @@
 |
 */
 
+=======
+>>>>>>> 9aa571d401adaffef997e3d11d07eef68c3329d5
 //Route::get('/', function () {
 //    return view('welcome');
 //});
 Route::get('/','education\EducationController@index');
+<<<<<<< HEAD
 
 Route::get('/', function () {
     return view('welcome');
@@ -34,3 +38,8 @@ Route::prefix("user")->group(function (){
 });
 
 
+=======
+Route::prefix('/course')->group(function(){
+    Route::get('/list','course\CourseController@lists');
+});
+>>>>>>> 9aa571d401adaffef997e3d11d07eef68c3329d5
