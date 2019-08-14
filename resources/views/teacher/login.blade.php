@@ -28,17 +28,18 @@
         <!-- 输入框 -->
         <div class="lgD">
             <img class="img1" src="/img/logName.png"/><input type="text"
-                                                            placeholder="请输入用户名" name="t_name"/>
+                                                             placeholder="请输入用户名" name="t_name"/>
         </div>
         <div class="lgD">
             <img class="img1" src="/img/logPwd.png"/><input type="password"
-                                                           placeholder="请输入用户密码" name="t_pwd"/>
+                                                            placeholder="请输入用户密码" name="t_pwd"/>
         </div>
         <div class="logC">
             <button id="btn">登 录</button>
         </div>
         <div class="logC">
-            <button id="btn">注 册</button>
+            <a id="btns">还没有账号，去注册？</a><br>
+            <a id="btnss">忘记密码，去找回？</a>
         </div>
     </div>
 </div>
@@ -68,17 +69,23 @@
             $.ajax({
                 type: 'post',
                 data: {t_name: t_name, t_pwd: t_pwd},
-                url: 'logindo',
+                url: '/teacher/logindo',
                 dataType: 'json',
                 success: function (msg) {
                     if (msg.code == 1) {
                         alert(msg.msg);
-                        window.top.location.href = "index";
+                        window.top.location.href = "/teacher/index";
                     } else {
                         alert(msg.msg);
                     }
                 }
             });
+        });
+        $('#btns').click(function () {
+            window.top.location.href = "/teacher/reg";
+        });
+        $('#btnss').click(function () {
+            window.top.location.href = "/teacher/forgetpwd";
         });
     });
 </script>
