@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 804b5c7a3cb16324669a66a5fe29919ad4682318
 <?php
 /*
 |--------------------------------------------------------------------------
@@ -9,6 +13,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+<<<<<<< HEAD
 /*Route::get('/', function () {
     return view('welcome');
 });*/
@@ -43,6 +48,26 @@ Route::prefix("user")->group(function (){
     Route::any("putcontent","User\UserController@putcontent")->middleware('cache');
 
 });
+=======
+
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/','education\EducationController@index');
+
+Route::get('/teacher', function () {
+    return view('welcome');
+
+});
+Route::get('teacher/login','Teacher\TeacherController@login');
+Route::post('teacher/logindo','Teacher\TeacherController@logindo');
+Route::prefix("user")->group(function (){
+    Route::any("login","User\LoginController@index");
+    Route::any("register","User\LoginController@register");
+});
+
+
+>>>>>>> 804b5c7a3cb16324669a66a5fe29919ad4682318
 //管理后台
 Route::prefix('/admin')->group(function(){
     //登陆页面
@@ -56,6 +81,10 @@ Route::prefix('/admin')->group(function(){
     Route::get('adminuserlist','Admin\AdminController@adminuserlist')->middleware('checkadminuserlogin');   //管理员列表
     Route::post('adminuserdel','Admin\AdminController@adminuserdel')->middleware('checkadminuserlogin');   //管理员删除
     Route::match(['get','post'],'adminedit','Admin\AdminController@adminedit')->middleware('checkadminuserlogin');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 804b5c7a3cb16324669a66a5fe29919ad4682318
     //教师管理
     //教师列表
     Route::get('teacher/tlist','Admin\TeacherController@teacherList');
@@ -73,17 +102,46 @@ Route::prefix('/admin')->group(function(){
     Route::any('coursecatelist','Admin\TeacherController@coursecatelist');
     Route::any('coursecateedit','Admin\TeacherController@coursecateedit');
     Route::any('coursecatedel','Admin\TeacherController@coursecatedel');
+<<<<<<< HEAD
     //课程审核管理
     Route::get('teacher/courselist','Admin\TeacherController@courselist');
+=======
+
+    //课程审核管理
+    Route::get('teacher/courselist','Admin\TeacherController@courselist');
+
+
+>>>>>>> 804b5c7a3cb16324669a66a5fe29919ad4682318
     //资讯管理
     //资讯分类添加
     Route::any('advisory/cateadd','Admin\AdvisoryController@cateadd');
     Route::any('advisory/catelist','Admin\AdvisoryController@catelist');  //分类列表
     Route::any('advisory/cateedit','Admin\AdvisoryController@cateedit');  //分类修改
     Route::any('advisory/catedel','Admin\AdvisoryController@catedel');  //分类删除
+<<<<<<< HEAD
+=======
+
+>>>>>>> 804b5c7a3cb16324669a66a5fe29919ad4682318
     Route::any('advisory/descadd','Admin\AdvisoryController@descadd');  //资讯内容添加
     Route::any('advisory/desclist','Admin\AdvisoryController@desclist');  //资讯内容列表
     Route::any('advisory/descdel','Admin\AdvisoryController@descdel');  //资讯内容删除
     Route::any('advisory/descedit','Admin\AdvisoryController@descedit');  //资讯内容修改
+<<<<<<< HEAD
     Route::get('test','Admin\LoginController@test');   //测试
 });
+=======
+
+
+
+    Route::get('test','Admin\LoginController@test');   //测试
+});
+
+
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('/','education\EducationController@index');
+Route::prefix('/course')->group(function(){
+    Route::get('/list','course\CourseController@lists');
+});
+>>>>>>> 804b5c7a3cb16324669a66a5fe29919ad4682318
