@@ -27,7 +27,7 @@
 
         </div>
         <div class="loginbtn lb">
-            <a href="#" class="link-muted">还没有账号？立即免费注册</a>
+            <a href="{{url('user/register')}}" class="link-muted">还没有账号？立即免费注册</a>
             <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
             <a href="{{url('user/forgetpwd')}}" class="link-muted">找回密码</a>
         </div>
@@ -70,6 +70,8 @@
             success:function(res){
                 if(res==1){
                     alert('登录成功');
+                    window.location.href="/user/userindex";
+                    return false;
                 }else if(res==2){
                     alert('密码不正确');
                     return false;

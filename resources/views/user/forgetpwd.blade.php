@@ -10,10 +10,15 @@
         <h2>忘记密码</h2>
         <form>
             <div>
-                <p class="formrow"><label class="control-label" for="register_email">绑定的邮箱地址</label>
+                <p class="formrow"><label class="control-label" for="register_email">邮箱地址</label>
                     <input type="text" id="u_email"></p>
                 <span class="text-danger">请输入邮箱地址</span>
             </div>
+            {{--<div>--}}
+                {{--<p class="formrow"><label class="control-label" for="register_email">邮箱验证码</label>--}}
+                    {{--<input type="text" id="u_code"></p>--}}
+                {{--<span class="text-danger">请输入邮箱验证码</span>--}}
+            {{--</div>--}}
             <div class="loginbtn reg">
                 <button type="button" class="uploadbtn ub1" id="sub">发送</button>
             </div>
@@ -47,6 +52,7 @@
 
             })
         });
+
 
     </script>
 @endsection

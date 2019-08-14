@@ -104,6 +104,8 @@
               success:function(res){
              if(res==1){
                  alert('注册成功');
+                 window.location.href="/user/login";
+                 return false;
              }else if(res==2){
                  alert('注册失败');
                  return false;
