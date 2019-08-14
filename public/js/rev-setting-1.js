@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 321b91aef80bb3cf441d1dd5651ce2472264e9f7
 $(document).ready(function() {
 
 	if ($.fn.cssOriginal!=undefined)
