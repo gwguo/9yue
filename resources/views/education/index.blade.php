@@ -1,5 +1,5 @@
 @extends('layouts.layouts')
-<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="{{url('/css/style.css')}}"/>
 <script type="text/javascript">
     function nTabs(thisObj,Num){
         if(thisObj.className == "current")return;
@@ -25,7 +25,7 @@
                 <ul>
                     <li data-transition="fade" data-slotamount="10" data-masterspeed="300" data-thumb="images-slider/thumbs/thumb1.jpg">
                         <!--  BACKGROUND IMAGE -->
-                        <img src="images-slider/wide2.jpg" alt="" />
+                        <img src="{{url('images-slider/wide2.jpg')}}" alt="" />
 
                         <!-- THE CAPTIONS IN THIS SLIDE -->
                         <div class="tp-caption sfl"
@@ -34,7 +34,7 @@
                              data-speed="300"
                              data-start="300"
                              data-easing="easeOutBack">
-                            <img src="images-slider/rb.png" alt="">
+                            <img src="{{url('images-slider/rb.png')}}" alt="">
                         </div>
 
                         <div class="caption sfb"
@@ -70,12 +70,12 @@
                              data-speed="1000"
                              data-start="1400"
                              data-easing="easeOutExpo">
-                            <img src="images-slider/slider-10.png" alt="" />
+                            <img src="{{url('images-slider/slider-10.png')}}" alt="" />
                         </div>
                     </li>
                     <li data-transition="fade" data-slotamount="10" data-masterspeed="300" data-thumb="images-slider/thumbs/thumb1.jpg">
                         <!--  BACKGROUND IMAGE -->
-                        <img src="images-slider/wide3.jpg" alt="" />
+                        <img src="{{url('images-slider/wide3.jpg')}}" alt="" />
 
                         <!-- THE CAPTIONS IN THIS SLIDE -->
                         <div class="tp-caption sfl"
@@ -84,7 +84,7 @@
                              data-speed="300"
                              data-start="300"
                              data-easing="easeOutBack">
-                            <img src="images-slider/rb.png" alt="">
+                            <img src="{{url('images-slider/rb.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption med-white lfl"
@@ -131,7 +131,7 @@
                              data-easing="easeOutExpo"
                              data-endeasing="fade" style="left:700px"
                         >
-                            <img src="images-slider/guy-shadow.png" alt="">
+                            <img src="{{url('images-slider/guy-shadow.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption small-white lft"
@@ -140,7 +140,7 @@
                              data-speed="2000"
                              data-start="2600"
                              data-easing="easeOutExpo">
-                            <img src="images-slider/spotlight.png" alt="">
+                            <img src="{{url('images-slider/spotlight.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption fade"
@@ -149,14 +149,14 @@
                              data-speed="2000"
                              data-start="2600"
                              data-easing="easeOutExpo">
-                            <img src="images-slider/guy.png" alt="">
+                            <img src="{{url('images-slider/guy.png')}}" alt="">
                         </div>
                     </li>
 
                     <!-- THE FIRST SLIDE -->
                     <li data-transition="fade" data-slotamount="10" data-masterspeed="300" data-thumb="images-slider/thumbs/thumb1.jpg">
                         <!--  BACKGROUND IMAGE -->
-                        <img src="images-slider/wide1.jpg" alt="" />
+                        <img src="{{url('images-slider/wide1.jpg')}}" alt="" />
 
                         <!-- THE CAPTIONS IN THIS SLIDE -->
                         <div class="caption large_text sfb"
@@ -165,7 +165,7 @@
                              data-speed="300"
                              data-start="800"
                              data-easing="easeOutExpo">
-                            <img src="images-slider/our-features.png" alt="">
+                            <img src="{{url('images-slider/our-features.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption sfr"
@@ -174,7 +174,7 @@
                              data-speed="300"
                              data-start="1000"
                              data-easing="easeOutBack">
-                            <img src="images-slider/lu.png" alt="">
+                            <img src="{{url('images-slider/lu.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption sfr"
@@ -183,7 +183,7 @@
                              data-speed="300"
                              data-start="1200"
                              data-easing="easeOutBack">
-                            <img src="images-slider/clean.png" alt="">
+                            <img src="{{url('images-slider/clean.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption sfr"
@@ -192,7 +192,7 @@
                              data-speed="300"
                              data-start="1400"
                              data-easing="easeOutBack">
-                            <img src="images-slider/lm.png" alt="">
+                            <img src="{{url('images-slider/lm.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption sfr"
@@ -201,7 +201,7 @@
                              data-speed="300"
                              data-start="1600"
                              data-easing="easeOutBack">
-                            <img src="images-slider/responsive.png" alt="">
+                            <img src="{{url('images-slider/responsive.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption sfr"
@@ -210,7 +210,7 @@
                              data-speed="300"
                              data-start="1800"
                              data-easing="easeOutBack">
-                            <img src="images-slider/lb.png" alt="">
+                            <img src="{{url('images-slider/lb.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption sfr"
@@ -219,7 +219,7 @@
                              data-speed="300"
                              data-start="2000"
                              data-easing="easeOutBack">
-                            <img src="images-slider/bootstrap.png" alt="">
+                            <img src="{{url('images-slider/bootstrap.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption sfl"
@@ -228,7 +228,7 @@
                              data-speed="300"
                              data-start="2200"
                              data-easing="easeOutBack">
-                            <img src="images-slider/ru.png" alt="">
+                            <img src="{{url('images-slider/ru.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption sfl"
@@ -237,7 +237,7 @@
                              data-speed="300"
                              data-start="2400"
                              data-easing="easeOutBack">
-                            <img src="images-slider/solid.png" alt="">
+                            <img src="{{url('images-slider/solid.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption sfl"
@@ -246,7 +246,7 @@
                              data-speed="300"
                              data-start="2600"
                              data-easing="easeOutBack">
-                            <img src="images-slider/rm.png" alt="">
+                            <img src="{{url('images-slider/rm.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption sfl"
@@ -255,7 +255,7 @@
                              data-speed="300"
                              data-start="2800"
                              data-easing="easeOutBack">
-                            <img src="images-slider/lightweight.png" alt="">
+                            <img src="{{url('images-slider/lightweight.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption sfl"
@@ -264,7 +264,7 @@
                              data-speed="300"
                              data-start="3000"
                              data-easing="easeOutBack">
-                            <img src="images-slider/rb.png" alt="">
+                            <img src="{{url('images-slider/rb.png')}}" alt="">
                         </div>
 
                         <div class="tp-caption sfl"
@@ -273,7 +273,7 @@
                              data-speed="300"
                              data-start="3200"
                              data-easing="easeOutBack">
-                            <img src="images-slider/fresh.png" alt="">
+                            <img src="{{url('images-slider/fresh.png')}}" alt="">
                         </div>
                     </li>
 
@@ -285,7 +285,7 @@
 
         <div class="td1">
             <div class="tdcont">
-                <span class="tdimg"><img src="images/ico4.jpg" width="450"></span>
+                <span class="tdimg"><img src="{{url('images/ico4.jpg')}}" width="450"></span>
                 <span class="tdtext">
         	<h3>完全免费课程</h3>
             <p>精心录制视频课程与讲解，全部课程完全免费。</p><br/>
@@ -296,7 +296,7 @@
         </div>
         <div class="td2">
             <div class="tdcont">
-                <span class="tdimg1"><img src="images/ico5.jpg" width="500"></span>
+                <span class="tdimg1"><img src="{{url('images/ico5.jpg')}}" width="500"></span>
                 <span class="tdtext1">
         	<h3 class="co1">智能评估题库</h3>
             <p>智能能力评估，学员可以通过具体题目，匹配相
@@ -308,7 +308,7 @@
         </div>
         <div class="td1">
             <div class="tdcont np">
-                <span class="tdimg" style="margin-top:80px"><img src="images/ico6.jpg" width="550"></span>
+                <span class="tdimg" style="margin-top:80px"><img src="{{url('images/ico6.jpg')}}" width="550"></span>
                 <span class="tdtext" style="margin-top:120px">
         	<h3 class="co2">智能匹配练习</h3>
             <p class="tex1">跟随视频课程同步练习，紧扣重点难
@@ -320,7 +320,7 @@
         </div>
         <div class="td2 np">
             <div class="tdcont np">
-                <span class="tdimg1 ni"><img src="images/ico7.png" width="300"></span>
+                <span class="tdimg1 ni"><img src="{{url('images/ico7.png')}}" width="300"></span>
                 <span class="tdtext1" style="margin-top:100px;">
         	<h3 class="co3">全天答疑解惑</h3>
             <p class="tex1">谋刻答疑社区，老师学员共同交流，我们的讲师更是倾囊相授，有问必答。</p><br/>
@@ -333,7 +333,7 @@
         <div class="crdiv">
 
         </div>
-<script>
+        <script>
             function logmine(){
                 document.getElementById("lne").style.display="block";
             }
