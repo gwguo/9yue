@@ -17,16 +17,19 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="78" column="70" selection-start-line="78" selection-start-column="70" selection-end-line="78" selection-end-column="70" />
+            <state relative-caret-position="1700">
+              <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
+              <folding>
+                <element signature="e#6#388#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TeacherController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TeacherController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Teacher/TeacherController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2500">
+            <state relative-caret-position="489">
               <caret line="937" column="5" selection-start-line="937" selection-start-column="5" selection-end-line="937" selection-end-column="5" />
               <folding>
                 <element signature="e#48#84#0#PHP" expanded="true" />
@@ -35,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reply.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="reply.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/teacher/reply.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="-511">
               <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
             </state>
           </provider>
@@ -98,11 +101,11 @@
         <option value="$PROJECT_DIR$/resources/views/teacher/workup.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/teacher/worklist.blade.php" />
         <option value="$PROJECT_DIR$/public/inc/left.html" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Model/ReplyModel.php" />
         <option value="$PROJECT_DIR$/app/Model/LeavewordsModel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Teacher/TeacherController.php" />
         <option value="$PROJECT_DIR$/resources/views/teacher/reply.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -202,7 +205,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="517" />
     <option name="y" value="295" />
     <option name="width" value="1085" />
@@ -384,15 +387,16 @@
       <workItem from="1565570103973" duration="2253000" />
       <workItem from="1565591314415" duration="5714000" />
       <workItem from="1565654795894" duration="21094000" />
-      <workItem from="1565743330936" duration="12085000" />
+      <workItem from="1565743330936" duration="13450000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108801000" />
+    <option name="totallyTimeSpent" value="110166000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" weight="0.329653" />
@@ -708,13 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="78" column="70" selection-start-line="78" selection-start-column="70" selection-end-line="78" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/ReplyModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -750,20 +747,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/teacher/reply.blade.php">
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+        <state relative-caret-position="1700">
+          <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
+          <folding>
+            <element signature="e#6#388#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Teacher/TeacherController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2500">
+        <state relative-caret-position="489">
           <caret line="937" column="5" selection-start-line="937" selection-start-column="5" selection-end-line="937" selection-end-column="5" />
           <folding>
             <element signature="e#48#84#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/teacher/reply.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-511">
+          <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
         </state>
       </provider>
     </entry>
