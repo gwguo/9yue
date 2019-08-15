@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Model\Admin\CourseTypeModel;
+use App\Model\Admin\SectionModel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\TeacherModel;
 use App\Model\Admin\CourseModel;
+use App\Model\Admin\PeriodModel;
 
 class TeacherController extends Controller
 {
@@ -144,6 +146,7 @@ class TeacherController extends Controller
             }
         }else{
             $course_id = $request->post('course_id');
+            //dd($course_id);
             $course_name = CourseTypeModel::where(['course_id'=>$course_id])->value('course_name');
             //dd($a_cate_name);
             return view('admin/teacher/coursecateedit',['course_id'=>$course_id,'course_name'=>$course_name]);
@@ -154,13 +157,211 @@ class TeacherController extends Controller
     public function courselist()
     {
         $course = CourseModel::join('course_type','course.course_id','=','course_type.course_id')
-            ->where(['course.is_del'=>0])->get();
-
-        if(!empty($course)){
-            $course = $course->toArray();
-            //dd($course);
-        }
+            ->where(['course.is_del'=>0])->get()->toArray();
+        //var_dump($course);die;
+//        if(!empty($course)){
+//            $course = $course->toArray();
+//            //dd($course);
+//        }
         return view('admin/teacher/courselist',['course'=>$course]);
+    }
+
+    //课程审核通过
+    public function coursecheckok( Request $request )
+    {
+        $c_id = $request->post('c_id');
+        //dd($t_id);
+        $res = CourseModel::where(['c_id'=>$c_id])->update(['audit'=>2,'audit_reason'=>null]);
+        if($res){
+            return [
+                'msg'=>'审核通过成功',
+                'code'=> 6
+            ];
+        }else{
+            return [
+                'msg'=>'审核通过失败',
+                'code'=> 5
+            ];
+        }
+    }
+
+    //课程审核不通过
+    public function coursecheckno( Request $request )
+    {
+        if( $request -> isMethod('post') ){
+            $data = $request->post();
+            //dd($data);
+            $c_id = $data['c_id'];
+            $audit_reason = $data['audit_reason'];
+            $update_res = CourseModel::where(['c_id'=>$c_id])->update(['audit_reason'=>$audit_reason,'audit'=>3]);
+            if($update_res){
+                return [
+                    'msg'=>'审核原因提交成功',
+                    'code'=> 6
+                ];
+            }else{
+                return [
+                    'msg'=>'审核原因提交失败',
+                    'code'=> 5
+                ];
+            }
+        }else{
+            $c_id = $request->post('c_id');
+            return view('admin/teacher/coursecheckno',['c_id'=>$c_id]);
+        }
+    }
+
+    //课程删除
+    public function coursecheckdel( Request $request )
+    {
+        $c_id = $request->post('c_id');
+        $course_info = SectionModel::where(['c_id'=>$c_id])->get();
+        if(empty($course_info)){
+            return [
+                'msg'=>'该课程下有内容，不可以直接删除',
+                'code'=> 5
+            ];
+        }
+        $res = CourseModel::where(['c_id'=>$c_id])->update(['is_del'=>1]);
+        if($res){
+            return [
+                'msg'=>'删除成功',
+                'code'=> 6
+            ];
+        }else{
+            return [
+                'msg'=>'删除失败',
+                'code'=> 5
+            ];
+        }
+
+    }
+
+    //章节列表
+    public function sectionlist()
+    {
+        $section = SectionModel::join('course','course.c_id','=','course_section.c_id')
+            ->where(['course_section.sis_del'=>0])->get()->toArray();
+        //dd($section);
+        return view('admin/teacher/sectionlist',['section'=>$section]);
+    }
+
+    //章节审核通过
+    public function sectioncheckok( Request $request )
+    {
+        $section_id = $request->post('section_id');
+        //dd($t_id);
+        $res = SectionModel::where(['section_id'=>$section_id])->update(['c_audit'=>2,'c_audit_reason'=>null]);
+        //dd($res);
+        if($res){
+            return [
+                'msg'=>'审核通过成功',
+                'code'=> 6
+            ];
+        }else{
+            return [
+                'msg'=>'审核通过失败',
+                'code'=> 5
+            ];
+        }
+    }
+
+    //章节审核不通过
+    public function sectioncheckno( Request $request )
+    {
+        if( $request -> isMethod('post') ){
+            $data = $request->post();
+            //dd($data);
+            $section_id = $data['section_id'];
+            $audit_reason = $data['c_audit_reason'];
+            $update_res = SectionModel::where(['section_id'=>$section_id])->update(['c_audit_reason'=>$audit_reason,'c_audit'=>3]);
+            if($update_res){
+                return [
+                    'msg'=>'审核原因提交成功',
+                    'code'=> 6
+                ];
+            }else{
+                return [
+                    'msg'=>'审核原因提交失败',
+                    'code'=> 5
+                ];
+            }
+        }else{
+            $section_id = $request->post('section_id');
+            return view('admin/teacher/sectioncheckno',['section_id'=>$section_id]);
+        }
+    }
+
+    //章节删除
+    public function sectioncheckdel( Request $request )
+    {
+        $section_id = $request->post('section_id');
+        $res = SectionModel::where(['section_id'=>$section_id])->update(['sis_del'=>1]);
+        if($res){
+            return [
+                'msg'=>'删除成功',
+                'code'=> 6
+            ];
+        }else{
+            return [
+                'msg'=>'删除失败',
+                'code'=> 5
+            ];
+        }
+    }
+
+    //课时列表
+    public function periodlist()
+    {
+        $period = PeriodModel::where(['course_period.pis_del'=>0])->get()->toArray();
+        //dd($section);
+        return view('admin/teacher/period',['period'=>$period]);
+    }
+
+    //课时审核通过
+    public function periodcheckok( Request $request )
+    {
+        $period_id = $request->post('period_id');
+        //dd($t_id);
+        $res = PeriodModel::where(['period_id'=>$period_id])->update(['p_audit'=>2,'p_audit_reason'=>null]);
+        //dd($res);
+        if($res){
+            return [
+                'msg'=>'审核通过成功',
+                'code'=> 6
+            ];
+        }else{
+            return [
+                'msg'=>'审核通过失败',
+                'code'=> 5
+            ];
+        }
+    }
+
+    //课时审核不通过
+    public function periodcheckno( Request $request )
+    {
+        if( $request -> isMethod('post') ){
+            $data = $request->post();
+            //dd($data);
+            $period_id = $data['period_id'];
+            $audit_reason = $data['p_audit_reason'];
+            $update_res = SectionModel::where(['period_id'=>$period_id])->update(['p_audit_reason'=>$audit_reason,'p_audit'=>3]);
+            if($update_res){
+                return [
+                    'msg'=>'审核原因提交成功',
+                    'code'=> 6
+                ];
+            }else{
+                return [
+                    'msg'=>'审核原因提交失败',
+                    'code'=> 5
+                ];
+            }
+        }else{
+            $period_id = $request->post('period_id');
+            return view('admin/teacher/periodcheckno',['period_id'=>$period_id]);
+        }
     }
 
 }

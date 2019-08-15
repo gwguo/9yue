@@ -9,39 +9,39 @@
             <col>
         </colgroup>
 
-        @if($course != null)
+        @if($section != null)
             <thead>
             <tr>
                 <th>编号</th>
-                <th>课程名称</th>
-                <th>课程所属分类</th>
-                <th>课程价格</th>
-                <th>课程状态</th>
+                <th>章节名称</th>
+                <th>章节内容</th>
+                <th>章节所属课程</th>
+                <th>章节状态</th>
                 <th>操作</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($course as $k => $v)
-                <tr c_id={{$v['c_id']}}>
-                    <td>{{$v['c_id']}}</td>
+            @foreach($section as $k => $v)
+                <tr section_id={{$v['section_id']}}>
+                    <td>{{$v['section_id']}}</td>
+                    <td>{{$v['section_name']}}</td>
+                    <td>{{$v['section_desc']}}</td>
                     <td>{{$v['c_name']}}</td>
-                    <td>{{$v['course_name']}}</td>
-                    <td>{{$v['c_price']}}</td>
                     <td>
-                        @if($v['audit']==1)
+                        @if($v['c_audit']==1)
                             审核中
-                        @elseif($v['audit']==2)
+                        @elseif($v['c_audit']==2)
                             授课中
                         @else
                             审核失败
                         @endif
                     </td>
                     <td>
-                        @if($v['audit']==1)
+                        @if($v['c_audit']==1)
                             <button class="layui-btn layui-btn-xs ok">审核通过</button>
                             <button class="layui-btn layui-btn-xs no">审核不通过</button>
                         @endif
-                            <button class="layui-btn layui-btn-xs del">删除</button>
+                        <button class="layui-btn layui-btn-xs del">删除</button>
                     </td>
                 </tr>
             @endforeach
@@ -55,11 +55,11 @@
         layui.use('layer',function(){
             //审核通过
             $('.ok').click(function() {
-                var c_id = $(this).parents('tr').attr('c_id');
+                var section_id = $(this).parents('tr').attr('section_id');
 
                 $.post(
-                    "/admin/coursecheckok",
-                    {c_id:c_id},
+                    "/admin/sectioncheckok",
+                    {section_id:section_id},
                     function(msg){
                         layer.msg(msg.msg,{icon:msg.code,time:1000},function(){
                             if (msg.code == 6) {
@@ -73,16 +73,16 @@
 
             //审核不通过
             $('.no').click(function(){
-                var c_id = $(this).parents('tr').attr('c_id');
-                location.href="/admin/coursecheckno?c_id="+c_id;
+                var section_id = $(this).parents('tr').attr('section_id');
+                location.href="/admin/sectioncheckno?section_id="+section_id;
             });
 
             //锁定
             $('.del').click(function () {
-                var c_id = $(this).parents('tr').attr('c_id');
+                var section_id = $(this).parents('tr').attr('section_id');
                 $.post(
-                    "/admin/coursecheckdel",
-                    {c_id:c_id},
+                    "/admin/sectioncheckdel",
+                    {section_id:section_id},
                     function(msg){
                         layer.msg(msg.msg,{icon:msg.code,time:1000},function(){
                             if (msg.code == 6) {

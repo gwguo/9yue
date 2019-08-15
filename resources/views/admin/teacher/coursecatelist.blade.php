@@ -35,7 +35,6 @@
             //审核通过
             $('.del').click(function() {
                 var course_id = $(this).parents('tr').attr('course_id');
-
                 $.post(
                     "/admin/coursecatedel",
                     {course_id:course_id},
@@ -53,6 +52,7 @@
             //
             $('.edit').click(function(){
                 var course_id = $(this).parents('tr').attr('course_id');
+
                 location.href="/admin/coursecateedit?course_id="+course_id;
             });
 
