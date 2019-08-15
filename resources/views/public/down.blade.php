@@ -3,10 +3,17 @@
     <div class="fcontainer">
         <div class="fwxwb">
             <div class="fwxwb_1">
+<<<<<<< HEAD
+                <span>关注微信</span><img width="95" alt="" src="/images/num.png">
+            </div>
+            <div>
+                <span>关注微博</span><img width="95" alt="" src="/images/wb.png">
+=======
                 <span>关注微信</span><img width="95" alt="" src="{{url('/images/num.png')}}">
             </div>
             <div>
                 <span>关注微博</span><img width="95" alt="" src="{{url('/images/wb.png')}}">
+>>>>>>> 518e962903bdedfd5a34599c9e3ed90a5cbfd2dc
             </div>
         </div>
         <div class="fmenu">
@@ -25,10 +32,17 @@
 	</div>
 	</span>
     <span class="barico em" style="position:relative">
+<<<<<<< HEAD
+	  <img src="/images/num.png" width="75" class="showem">
+	</span>
+    <span class="barico wb" style="position:relative">
+	  <img src="/images/wb.png" width="75" class="showwb">
+=======
 	  <img src="{{url('/images/num.png')}}" width="75" class="showem">
 	</span>
     <span class="barico wb" style="position:relative">
 	  <img src="{{url('/images/wb.png')}}" width="75" class="showwb">
+>>>>>>> 518e962903bdedfd5a34599c9e3ed90a5cbfd2dc
 	</span>
     <span class="barico top" id="top">置顶</span>
 </div>

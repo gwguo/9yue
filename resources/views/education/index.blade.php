@@ -1,5 +1,9 @@
 @extends('layouts.layouts')
+<<<<<<< HEAD
+<link rel="stylesheet" href="/css/style.css"/>
+=======
 <link rel="stylesheet" href="{{url('/css/style.css')}}"/>
+>>>>>>> 518e962903bdedfd5a34599c9e3ed90a5cbfd2dc
 <script type="text/javascript">
     function nTabs(thisObj,Num){
         if(thisObj.className == "current")return;

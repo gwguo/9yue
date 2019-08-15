@@ -2,9 +2,14 @@
     <div class="nav">
         <span class="navimg"><a href="index.html"><img border="0" src="/images/logo.png"></a></span>
         <ul class="nag">
+<<<<<<< HEAD
+            <li><a href="course/list" class="link1 current">课程</a></li>
+            <li><a href="/information/information" class="link1">资讯</a></li>
+=======
             <li><a href="{{url('user/userindex')}}" class="link1 current">个人</a></li>
             <li><a href="articlelist.html" class="link1">课程</a></li>
             <li><a href="articlelist.html" class="link1">资讯</a></li>
+>>>>>>> 518e962903bdedfd5a34599c9e3ed90a5cbfd2dc
             <li><a href="teacherlist.html" class="link1">讲师</a></li>
             <li><a href="exam_index.html" class="link1" target="_blank">题库</a></li>
             <li><a href="askarea.html" class="link1" target="_blank">问答</a></li>
