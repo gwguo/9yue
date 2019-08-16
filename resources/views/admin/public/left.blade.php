@@ -31,9 +31,9 @@
           </dl>
         </li>
         <li class="layui-nav-item">
-          <a href="javascript:;">管理</a>
+          <a href="javascript:;">前台用户管理</a>
           <dl class="layui-nav-child">
-            <dd><a href=""></a></dd>
+            <dd><a href="/admin/index/suser">用户列表</a></dd>
           </dl>
         </li>
       </ul>

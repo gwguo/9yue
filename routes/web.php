@@ -9,37 +9,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-Route::get('/','education\EducationController@index');
-
-//前台咨询
-Route::prefix('/information')->group(function () {
-    //商品条件
-    Route::any('/information','information\InformationController@information');//全部咨询
-    Route::any('/articlelist','information\InformationController@articlelist');//咨询内容
-    Route::any('/teacherlist','information\InformationController@teacherlist');//指导老师
-    Route::any('/chat','information\InformationController@chat');//指导窗口
-    Route::any('/chatdo','information\InformationController@chatdo');//指导窗口
-
-    Route::any('/couse','information\InformationController@course');//推荐课程
-    Route::any('/courselist','information\InformationController@courselist');//课程列表
-    Route::any('/coursecont','information\InformationController@coursecont');//进入购买课程
-    Route::any('/buycoursecont','information\InformationController@buycoursecont');//获取购买信息
-
-
-    Route::any('/order','order\OrderController@order');//订单
-
-
-
-
-=======
->>>>>>> 2c74dadd6c8dd93b742a5bd890c38131f859e705
 /*Route::get('/', function () {
     return view('welcome');
 });*/
@@ -159,6 +128,10 @@ Route::prefix('/admin')->group(function(){
     Route::any('advisory/descdel','Admin\AdvisoryController@descdel');  //资讯内容删除
     Route::any('advisory/descedit','Admin\AdvisoryController@descedit');  //资讯内容修改
 
+
+    Route::any('index/suser','Admin\IndexUserController@suserlist');  //前台用户列表
+    Route::any('index/suserdel','Admin\IndexUserController@suserdel');  //前台用户锁定
+
     Route::get('test','Admin\LoginController@test');   //测试
 });
 
@@ -168,18 +141,10 @@ Route::prefix('/admin')->group(function(){
 Route::get('/','education\EducationController@index');
 Route::prefix('/course')->group(function(){
     Route::get('/list','course\CourseController@lists');
->>>>>>> 3cdb0a20a9b8e508eec39061945d7e1f97a61780
 });
-=======
 Route::get('/', function () {
     return view('index');
 });
-<<<<<<< HEAD
-Route::get('/', function () {
-    return view('index');
-});
-=======
->>>>>>> 2c74dadd6c8dd93b742a5bd890c38131f859e705
 //登录
 Route::get('teacher/login', 'Teacher\TeacherController@login');
 Route::post('teacher/logindo', 'Teacher\TeacherController@logindo');
@@ -244,7 +209,3 @@ Route::post('teacher/workupdo', 'Teacher\TeacherController@workupdo');
 //问答
 Route::get('teacher/reply', 'Teacher\TeacherController@reply');
 Route::post('teacher/replyadd', 'Teacher\TeacherController@replyadd');
-<<<<<<< HEAD
-=======
->>>>>>> 518e962903bdedfd5a34599c9e3ed90a5cbfd2dc
->>>>>>> 2c74dadd6c8dd93b742a5bd890c38131f859e705

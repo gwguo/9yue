@@ -3,9 +3,8 @@ namespace App\Model\Admin;
 
 use Illuminate\Database\Eloquent\Model;
 
-class AdvisoryModel extends Model
+class IndexUserModel extends Model
 {
-    //
-    public $table = "advisory";
     public $timestamps = false;
+    public $table = 'user';
 }

@@ -1,5 +1,5 @@
 @extends('admin/layouts/admin')
-@section('title','教师审核不通过原因')
+@section('title','课时审核不通过原因')
 @section('content')
     <form class="layui-form layui-form-pane" action="" enctype="multipart/form-data">
         <input type="hidden" name="period_id" value="{{$period_id}}">
@@ -32,7 +32,7 @@
                     function(msg) {
                         layer.msg(msg.msg,{icon:msg.code,time:2000},function() {
                             if (msg.code == 6) {
-                                location.href="/admin/teacher/sectionlist";
+                                location.href="/admin/teacher/periodlist";
                             }
                         });
                     }

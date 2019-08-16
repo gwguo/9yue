@@ -346,7 +346,7 @@ class TeacherController extends Controller
             //dd($data);
             $period_id = $data['period_id'];
             $audit_reason = $data['p_audit_reason'];
-            $update_res = SectionModel::where(['period_id'=>$period_id])->update(['p_audit_reason'=>$audit_reason,'p_audit'=>3]);
+            $update_res = PeriodModel::where(['period_id'=>$period_id])->update(['p_audit_reason'=>$audit_reason,'p_audit'=>3]);
             if($update_res){
                 return [
                     'msg'=>'审核原因提交成功',
@@ -363,5 +363,25 @@ class TeacherController extends Controller
             return view('admin/teacher/periodcheckno',['period_id'=>$period_id]);
         }
     }
+
+    //课时删除
+    public function periodcheckdel( Request $request )
+    {
+        $period_id = $request->post('period_id');
+        $res = PeriodModel::where(['period_id'=>$period_id])->update(['pis_del'=>1]);
+        if($res){
+            return [
+                'msg'=>'删除成功',
+                'code'=> 6
+            ];
+        }else{
+            return [
+                'msg'=>'删除失败',
+                'code'=> 5
+            ];
+        }
+    }
+
+
 
 }
